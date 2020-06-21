@@ -93,6 +93,26 @@ router.put('/:id', async (req, res) => {
         redirect('/')
       }    
     }
+
+
+// Delete Book Page
+router.delete('/:id', async (req, res) => {
+  let book
+  try {
+    book = await Book.findById(req.params.id)
+    await book.remove()
+    res.redirect('/books')
+  } catch {
+    if (book != null) {
+      res.render('books/show', {
+        book: book,
+        errorMessage: 'Could not remove book'
+      })
+    } else {
+      res.redirect('/')
+    }
+  }
+})
   
 async function renderNewPage(res, book, hasError = false) {
   renderFormPage(res, book, 'new', hasError)
@@ -113,9 +133,9 @@ async function renderFormPage(res, book, form, hasError = false) {
       }
       if (hasError) {
         if (form === 'edit') {
-          params.errorMessage= 'Error Updating Book'
+          params.errorMessage: 'Error Updating Book'
         } else {
-          params.errorMessage 'Error Creating Book'
+          params.errorMessage: 'Error Creating Book'
         }
       }
       res.render(`books/${form}`, params)        
