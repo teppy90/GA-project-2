@@ -5,6 +5,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express')
 const app = express()
+// Allow use of Heroku's port or your own local port, depending on the environment
+const PORT = process.env.PORT || 3000
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
@@ -33,5 +35,5 @@ app.use('/authors', authorRouter)
 app.use('/books', bookRouter)
 
 
-app.listen(process.env.PORT || 3000)
+app.listen(PORT, () => console.log( 'Listening on port:', PORT))
 
