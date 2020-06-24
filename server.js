@@ -25,7 +25,9 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
 //mongoose
 const mongoose = require('mongoose')
-mongoose.connect(process.env.DATABASE_URL, { useUnifiedTopology: true, useNewUrlParser: true })
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('connected to Mongoose'))
