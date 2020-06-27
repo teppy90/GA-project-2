@@ -23,6 +23,8 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
 
+
+
 //mongoose
 const mongoose = require('mongoose')
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/test';
