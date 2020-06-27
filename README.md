@@ -3,7 +3,8 @@
 https://ga-project-2-teppy.herokuapp.com/
 Problem Statement
 
-The purpose of this app is to promote active sharing of books for book lovers. It is also to help people pick up the habit of book reading to thru sharing of good books. Users are also able to communicate with each other using a chat function.
+The purpose of this app is to promote active sharing of books for book lovers. It is also to help people pick up the habit of book reading to through sharing of good books. Users are also able to communicate with each othe by leaving comments on each book added by a user.
+
 Technologies Used
 
 Front-end: HTML, Bootstrap CSS Back-end: Node JS, Express, filePond 
