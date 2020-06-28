@@ -27,7 +27,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-
 // New Book Route
 router.get('/new', async (req, res) => {
   renderNewPage(res, new Book())
@@ -99,7 +98,6 @@ router.put('/:id', async (req, res) => {
   }
 })
 
-
 // Delete Book Page
 router.delete('/:id', async (req, res) => {
   let book
@@ -118,7 +116,7 @@ router.delete('/:id', async (req, res) => {
     }
   }
 })
-  
+
 async function renderNewPage(res, book, hasError = false) {
   renderFormPage(res, book, 'new', hasError)
 }
@@ -126,7 +124,6 @@ async function renderNewPage(res, book, hasError = false) {
 async function renderEditPage(res, book, hasError = false) {
   renderFormPage(res, book, 'edit', hasError)
 }
-
 
 async function renderFormPage(res, book, form, hasError = false) {
   try {
