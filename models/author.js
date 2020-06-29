@@ -20,4 +20,13 @@ authorSchema.pre('remove', function(next) {
     })
 })
 
-module.exports = mongoose.model('Author', authorSchema)
+module.exports = authorSchema
+
+// const userSchema = new Schema({ name: String, email: String });
+
+// // The alternative to the export model pattern is the export schema pattern.
+// module.exports = userSchema;
+
+// Because if you export a model as shown below, the model will be scoped
+// to Mongoose's default connection.
+// module.exports = mongoose.model('User', userSchema);
