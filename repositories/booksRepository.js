@@ -5,7 +5,6 @@ module.exports = {
     getAll(userid, res) {
         return db.recipes.find({ userid: userid }).toArray();
     },
-    // why would find() return undefined? 
     async getOneByName(userid) {
         try {
             const o_id = new ObjectId(userid);

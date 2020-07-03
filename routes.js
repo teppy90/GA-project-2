@@ -32,15 +32,4 @@ app.get('/new', booksController.new)
 app.post('/books', booksController.create);
 
 
-
-
-
-
-
-    
-// app.post('/books/:title/comments', booksController.addComments);
-// app.delete('/books/:title/comments', bookController.deleteComment);
-
-
-
 };

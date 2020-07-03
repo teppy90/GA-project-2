@@ -5,14 +5,14 @@ module.exports = {
     async create(req, res) {
         try {
             console.log('hello', req.body)
-            console.log('cake', validate)
+            console.log('world', validate)
             validate.users.validate(req.body)
-            console.log('hello-2', req.body)
+            console.log('jello', req.body)
 
             await usersRepository.create(req.body)
             res.redirect('/users/success')
         } catch (err) {
-            res.send(err)// set up 404 error later 
+            res.send(err)
         }
     },
     newForm(req, res) {

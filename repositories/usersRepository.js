@@ -27,7 +27,6 @@ module.exports = {
             const updatedItem = await db.users.updateOne({
                 username:
                     username
-
             },
                 {
                     $push: {
@@ -38,7 +37,6 @@ module.exports = {
                     }
                 })
             return updatedItem
-
         } catch (err) {
             throw new Error(`Due to ${err.message}`);
         }
