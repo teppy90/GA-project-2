@@ -1,15 +1,9 @@
 # mini bookshelf app
-
-## Table of Content
-- [Project Demo](#Project-Demo)
-- [Project Scope](#Project-Scope)
-- [Technology utilized](#Technology-utilized)
-- [Difficulties / Limitation](#Difficulties-/-Limitation)
-- [User Stories and Wireframes](#User-Stories-and-Wireframes)
-- [Extra Implementation](#Extra-Implementation)
-
 ## Project Demo
 https://ga-project-2-teppy.herokuapp.com/
+
+https://docs.google.com/presentation/d/e/2PACX-1vRxvfFPhro095iSjXvhexmGfgjIFfppQVHhWzHhiUXL0f11tWhS1TUpGyILHF6_2vUudr50FVFREjcn/pub?start=false&loop=false&delayms=3000
+Powerpoint slide detailing how to use app on heroku
 
 ## Project Scope
 Project Scope:
@@ -34,7 +28,10 @@ https://docs.google.com/presentation/d/e/2PACX-1vRxvfFPhro095iSjXvhexmGfgjIFfppQ
 Powerpoint slide detailing how to use app on heroku
 
 ### UserStory 1
-I am forced to #stayhome this circuit breaker and would like to keep track of the books I read. Hopefully this app will provide features down the line to enable sharing of book records with other users and ability to exchange comments with them.
+I am forced to #stayhome this circuit breaker and would like to keep track of the books I read. 
+
+# Unsolved Problems
+1. Able to access book records of other users on the app and exchange comments.
+2. this is not the post mortem but a note that developing an ERD would have been good BEFORE the start of this project
 
 
-this is not the post mortem but a note that developing an ERD would have been good BEFORE the start of this project
