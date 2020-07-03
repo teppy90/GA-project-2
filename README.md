@@ -1,9 +1,10 @@
 # mini bookshelf app
 ## Project Demo
-https://ga-project-2-teppy.herokuapp.com/
+https://ga-project-2-teppy.herokuapp.com/ => heroku link
 
+Powerpoint slides detailing how to use app on heroku =>
 https://docs.google.com/presentation/d/e/2PACX-1vRxvfFPhro095iSjXvhexmGfgjIFfppQVHhWzHhiUXL0f11tWhS1TUpGyILHF6_2vUudr50FVFREjcn/pub?start=false&loop=false&delayms=3000
-Powerpoint slide detailing how to use app on heroku
+
 
 ## Project Scope
 Project Scope:
