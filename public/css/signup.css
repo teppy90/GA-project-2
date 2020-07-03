@@ -1,0 +1,141 @@
+
+  @media screen   and (device-width: 360px)   and (device-height: 740px)   and (-webkit-device-pixel-ratio: 4) {
+    .container1{
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      overflow: scroll;
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+}
+    
+     /* iphone X , XS, 11 Pro */
+     @media only screen and (min-device-width: 360px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { .container1{
+      width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      overflow: scroll;
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+      -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .card-columns {
+      -webkit-column-count:3;
+      -moz-column-count:3;
+      column-count:3;
+      column-gap: 5px
+    }
+    .card {
+      width: 40%
+    }
+
+}
+
+
+ /* iphone 6+, 6s+, 7+, 8+ */
+ @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) { 
+   .container1{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: scroll;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-columns {
+  -webkit-column-count:3;
+  -moz-column-count:3;
+  column-count:3;
+  column-gap: 5px
+}
+.card {
+  width: 35%
+} }
+
+
+
+ /* iphone XR, 11 */
+ @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) {.container1{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: scroll;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-columns {
+  -webkit-column-count:3;
+  -moz-column-count:3;
+  column-count:3;
+  column-gap: 5px
+}
+.card {
+  width: 40%
+} }
+
+/* iphone XS Max, 11 Pro Max */
+ @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) {
+   .container1{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: scroll;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card-columns {
+  -webkit-column-count:3;
+  -moz-column-count:3;
+  column-count:3;
+  column-gap: 5px
+}
+.card {
+  width: 40%
+} 
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+  .container1{
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: scroll;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-columns {
+    -webkit-column-count:3;
+    -moz-column-count:3;
+    column-count:3;
+    column-gap: 5px
+  }
+  .card {
+    width: 40%
+  } 
+  
+}

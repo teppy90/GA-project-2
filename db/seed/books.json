@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Beans",
+        "description": "A small pile of beans. Buy more beans for a big pile of beans.",
+    },
+    {
+        "name": "Bones",
+        "description": "It's just a bag of bones.",
+    },
+    {
+        "name": "Bins",
+        "description": "A stack of colorful bins for your beans and bones.",
+    }
+]

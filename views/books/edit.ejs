@@ -1,6 +1,32 @@
-<h2>Edit Book</h2>
-<form action="/books/<%= book.id %>?=method=PUT" method="POST" enctype="multipart/form-data">
-    <%- include('_form_fields') %>
-    <a href="/books">Cancel</a>
-    <button type="submit">Update</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+<!-- Navagation -->
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books">All Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books/<%= data._id%>">Create Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/myRecipe">My Recipes</a>
+        </li>
+    
+        <div>
+          <form action="/sessions?_method=DELETE" , method='POST'>
+            <input type="submit" value="Log Out" style="background-color: #08753c; color:white; border-style: none;">
+          </form>
+        </div>
+      </ul>
+
+
+ 
+  

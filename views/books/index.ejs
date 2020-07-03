@@ -1,23 +1,90 @@
-<h2>Search Books</h2>
-<form action="/books" method="GET">
-  <div>
-    <label>Title</label>
-    <input type="text" name="title" value="<%= searchOptions.title %>">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+<!-- Navagation -->
+    <ul class="nav fixed-top">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books">All Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books/<%= data._id%>">Create Recipe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/myRecipe">My Recipes</a>
+        </li>
+        <div>
+          <form action="/sessions?_method=DELETE", method='POST'>
+            <input type="submit" value="Log Out" style="background-color: #08753c; color:white; border-style: none;">
+            </form>
+        </div>
+      </ul>
+
+      <p class="notes">My Notes</p>
+
+    <a href='/new'><svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill plus"
+        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z" />
+      </svg></a>
+
+    <div class="card-columns col-sm-11 mx-auto" id="bootstrap-overrides">
+      <% data.forEach(data => { %>
+      <a href="/books/<%= data._id %>/edit">
+        <div class="card bg-light mb-3 mx-auto" id="bootstrap-overrides" style="width: 95%;">
+          <div class="card-body mx-auto" id="bootstrap-overrides">
+            <p class="card-text text-dark mx-auto" id="bootstrap-overrides"><%= data.description %></p>
+          </div>
+
+
+          <div class="delete">
+            <form action="/books/<%= data._id %>?_method=DELETE" method="POST">
+              <button type="submit" value="DELETE">
+
+
+                <a href="/books/<%= data._id%>"></a><svg width="1em" height="1em" viewBox="0 0 16 16"
+                  class="bi bi-trash trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                  <path fill-rule="evenodd"
+                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                </svg></i>
+      </a>
+      </button>
+      </form>
+    </div>
+
   </div>
-  <div>
-    <label>Published After</label>
-    <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+  </a>
+  <% }) %>
   </div>
-  <div>
-    <label>Published Before</label>
-    <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
   </div>
-  <button type="submit">Search</button>
-</form>
-<div>
-  <% books.forEach(book => { %>
-    <a href="/books/<%= book.id %>">
-    <img height="150" width="100" src="<%= book.coverImagePath %>">
-    </a>
-  <% }) %>    
-</div>
+
+  <!--===============================================================================================-->
+  <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/vendor/bootstrap/js/popper.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="/vendor/daterangepicker/moment.min.js"></script>
+  <script src="/vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  <script src="/vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  <script src="/js/main.js"></script>
+
+
+
+
+
+</body>

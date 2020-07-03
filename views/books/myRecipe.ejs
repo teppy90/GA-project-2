@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
+<body>
+<!-- Navagation -->
+    <ul class="nav fixed-top">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books">All Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/books/<%= data._id%>">>Create Recipe</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/myRecipe">My Recipes</a>
+          </li>
+          <div>
+            <form action="/sessions?_method=DELETE", method='POST'>
+              <input type="submit" value="Log Out" style="background-color: #08753c; color:white; border-style: none;">
+              </form>
+          </div>
+          <div class="welcome-div">
+            <p>Welcome <%= currentUser.username %> </p>
+          </div>
+    
+      </ul>
+
+<!-- Jumbotron -->
+      <div class="jumbotron myRecipe">
+        <h1 class="display-4"></h1>
+      </div>
+
+
+<div class="container item-container"> 
+
+      <div class="item-div">
+	        <% items.forEach((item) => { %>
+
+             <div class="card shadow" style="width: 15rem; height: 20em;">  
+                <img src="<%= item.img%>" class="card-img-top" alt="recipe">
+                <div class="card-body">
+                 <p class="card-title"><%= item.title%></p>
+                <a href="/books/<%= item.title%>" class=" btn card-btn">Read more</a>
+                </div>
+              </div>
+            <%})%>
+            
+     </div>  
+
+</div> 
+

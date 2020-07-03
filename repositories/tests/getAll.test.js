@@ -1,9 +1,9 @@
 const { expect } = require('chai');
 
-const shopRepository = require('../shopRepository');
+const authorsRepository = require('../authorsRepository');
 const db = require('../../db');
 
-describe('shopRepository.getAll', () => {
+describe('authorsRepository.getAll', () => {
     beforeAll(async () => {
         await db.connect();
     });
@@ -13,18 +13,18 @@ describe('shopRepository.getAll', () => {
     });
     
     it('should return an array', async () => {
-        const shopItems = await shopRepository.getAll();
+        const shopItems = await authorsRepository.getAll();
         expect(shopItems).to.be.an('array');
     });
 
     it('should return an array of shop items, and one of the items should be "Beans"', async () => {
-        const shopItems = await shopRepository.getAll();
+        const shopItems = await authorsRepository.getAll();
         const beans = shopItems.find(item => item.name === 'Beans');
         expect(beans.name).to.equal('Beans');
     });
 
     it('should return all multiple items',  async () => {
-        const shopItems = await shopRepository.getAll();
+        const shopItems = await authorsRepository.getAll();
         expect(shopItems.length).to.be.greaterThan(0);
     });
 });

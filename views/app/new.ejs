@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head.ejs') %>
+  <title>Write your thoughts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <!--===============================================================================================-->
+</head>
+
+<body>
+
+
+  <div class="limiter">
+
+    <div class="container-login100">
+      <div class="wrap-login1000">
+        <form class="login100-form validate-form" action="/books" method="POST">
+          <span class="login100-form-title p-b-26">
+            Write your thoughts
+          </span>
+
+          <div class="wrap-input100 validate-input">
+            <input id="title" type="text" name="title" placeholder="Title" id="inputdefault" class="validate title ">
+          </div>
+
+          <div class="wrap-input100 validate-input" >
+
+            <textarea placeholder="Write your thoughts here" id="data overridebootstrap" style="width: 100%; min-height: 150px; resize: vertical; white-space: pre" name="description" type="text"  class="materialize-textarea" data-length="500"></textarea>
+
+          </div>
+
+          <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+              <div class="login100-form-bgbtn"></div>
+              <button class="login100-form-btn" type="submit" >
+                Edit
+              </button>
+            </div>
+          </div>
+          <div class="text-center p-t-115">
+            <span class="txt1">
+             <a href="/books">Go back</a>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  </div>
+ 
+
+  <div id="dropDownSelect1"></div>
+
+</body>
+
+</html>

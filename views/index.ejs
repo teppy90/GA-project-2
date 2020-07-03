@@ -1,30 +1,205 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+ 
+<head>
     <%- include('./partials/head.ejs') %>
-    <title>Welcome</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>
-      <% if (currentUser) { %>
-          Welcome <%= currentUser.username %>!
-          <h2>
-            <a class="waves-effect waves-light btn" href="/authors">Join the party!</a>
-          </h2>
-          <h2>
-            <a class="waves-effect waves-light btn" href="/authors">See My Shop!</a>
-          </h2>
-      </h1>
-      <form action="/sessions?_method=DELETE" method="post">
-        <input type="submit" name="" value="Logout" class="waves-effect waves-light btn">
-      </form>
-      <% } else { %>
-      <h2>Please</h2>
-      <a href="/users/new" class="waves-effect waves-light btn">Sign Up</a>
-      <h3>or</h3>
-      <a href="/sessions/new" class="waves-effect waves-light btn">Log In</a>
-      <% } %>
+</head>
+<body>
+
+  <% if(currentUser) {%>
+    <!-- Navagation -->
+  
+    <ul class="nav fixed-top"> 
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/books">All Recipes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/books/<%= data._id%>"></a>">Create Recipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/myRecipe">My Recipes</a>
+      </li>
+      <div>
+        <form action="/sessions?_method=DELETE", method='POST'>
+          <input type="submit" value="Log Out" style="background-color: #08753c; color:white; border-style: none;">
+          </form>
+      </div>
+      <div class="welcome-div">
+        <p>Welcome <%= currentUser.username %> </p>
+      </div>
+      
+  </ul>
+  
+<!-- Images -->
+<div class="container image-div img-fluid">
+</div>
+<div class="container article-container"> 
+    <div class="article">
+        
+
+      </div>
+ </div>
+ <!-- SignUp  -->
+<div class="about position-relative py-5">
+  <div class="">
+    <div class="row d-flex align-items-center py-5">
+      <div class="col-md-6 my-auto">
+        <h1 class="display-1 font-weight-normal custom-font-title text-white" style="margin-left: 15px; margin-top: 30px">The<br />Love<br />of Food</h1>
+      </div>
+      <div style="margin-top: 120px; margin-right: 20px">
+        <h1 class="font-weight-normal custom-font-title text-white">Save your favourite recipes</h1>
+        <p class="lead font-weight-normal text-white">Sign up today to view and comment of recipe</p>
+          <a class="btn card-btn" href="/users/new">Create a free account</a>
+      </div>
     </div>
-  </body>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <!-- Grid row-->
+  <div class="row">
+  
+    <!-- Grid column -->
+    <div class="col-md-12 py-4">
+      <div class="mb-2 flex-center">
+  
+        <!-- Facebook -->
+        <a class="fb-ic">
+          <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="tw-ic">
+          <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!-- Google +-->
+        <a class="gplus-ic">
+          <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Linkedin -->
+        <a class="li-ic">
+          <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Instagram-->
+        <a class="ins-ic">
+          <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        <!--Pinterest-->
+        <a class="pin-ic">
+          <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+        </a>
+      </div>
+    </div>
+    <!-- Grid column -->
+  
+  </div>
+  <!-- Grid row-->
+  
+  
+  <!-- Copyright -->
+  <div>© 2020 Copyright: KidsRecipes.com</div>
+  <!-- Copyright -->
+  
+  </div>
+  
+ <% } else { %>
+    <!-- Navagation -->
+    <ul class="nav fixed-top">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/new">Sign Up</a>   
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="/sessions/new">Log in</a>   
+        </li>
+      </ul>
+<!-- Images -->
+<div class="image-div" class="img-fluid">
+</div>
+<div class="container article-container"> 
+      <div class="article">
+        </div>
+   </div>
+<!-- SignUp  -->
+<div class="about position-relative py-5">
+  <div class="">
+    <div class="row d-flex align-items-center py-5">
+      <div class="col-md-6 my-auto">
+        <h1 class="display-1 font-weight-normal custom-font-title text-white" style="margin-left: 15px; margin-top: 30px">The<br />Love<br />of Food</h1>
+      </div>
+      <div style="margin-top: 120px; margin-right: 20px">
+        <h1 class="font-weight-normal custom-font-title text-white">Save your favourite recipes</h1>
+        <p class="lead font-weight-normal text-white">Sign up today to view and comment of recipe</p>
+         <a class="btn card-btn" href="/users/new">Create a free account</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+<!-- Grid row-->
+<div class="row">
+  <!-- Grid column -->
+  <div class="col-md-12 py-4">
+    <div class="mb-2 flex-center">
+      <!-- Facebook -->
+      <a class="fb-ic">
+        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      </a>
+      <!-- Twitter -->
+      <a class="tw-ic">
+        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      </a>
+      <!-- Google +-->
+      <a class="gplus-ic">
+        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      </a>
+      <!--Linkedin -->
+      <a class="li-ic">
+        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      </a>
+      <!--Instagram-->
+      <a class="ins-ic">
+        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      </a>
+      <!--Pinterest-->
+      <a class="pin-ic">
+        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+      </a>
+    </div>
+  </div>
+  <!-- Grid column -->
+</div>
+<!-- Grid row-->
+<!-- Copyright -->
+<div>© 2020 Copyright: KidsRecipes.com</div>
+<!-- Copyright -->
+</div>
+<% } %>
+
+
+
+  <!--===============================================================================================-->
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/daterangepicker/moment.min.js"></script>
+  <script src="vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  <script src="vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+  <script src="js/main.js"></script>
+
+
+</body>
 </html>

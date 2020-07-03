@@ -1,21 +1,46 @@
-const db = require('../db');
-const bcrypt = require('bcrypt');
-const SALT_ROUND = process.env.SALT_ROUND || 10;
+const db = require('../db')
+const bcrypt = require('bcrypt')
 
 module.exports = {
-    async create (user) {
+    async create(user) {
         try {
-            user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(SALT_ROUND));
-            const { insertedCount } = await db.users.insertOne(user);
-            if (!insertedCount) throw new Error('insertion failure');
-            return true;
+            user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10))
+            const addUser = await db.users.insertOne(user);
+            return addUser;
         } catch (err) {
-            throw new Error(`Due to ${err.message}, you are not allowed to insert this item ${JSON.stringify(user)}`);
+            throw new Error(`Due to ${err.message}, you are not allowed to insert this user ${JSON.stringify(addUser)}`);
         }
     },
-    async find (username) {
+    async get(username) {
+        const user = await db.users.findOne({ username: username })
+        if (!user) throw new Error(`The user ${username} is not in our DB`);
+        return user.entries;
+    },
+    async find(username) {
         const user = await db.users.findOne({ username: username });
-        if(!user) throw new Error(`The user ${username} is not in our DB`);
+        if (!user) throw new Error(`The user ${username} is not in our DB`);
         return user;
-    }
-};
+    },
+
+    async update(username, data) {
+        try {
+            const updatedItem = await db.users.updateOne({
+                username:
+                    username
+
+            },
+                {
+                    $push: {
+                        entries: {
+                            title: data.title,
+                            description: data.description
+                        }
+                    }
+                })
+            return updatedItem
+
+        } catch (err) {
+            throw new Error(`Due to ${err.message}`);
+        }
+    },
+}

@@ -1,8 +1,8 @@
 const { expect } = require('chai');
-const shopRepository = require('../shopRepository');
+const authorsRepository = require('../authorsRepository');
 const db = require('../../db');
 
-describe('shopRepository.update', () => {
+describe('authorsRepository.update', () => {
     beforeAll(async () => {
         await db.connect();
     });
@@ -12,7 +12,7 @@ describe('shopRepository.update', () => {
     });
 
     it('should return result when update the existing shop item', async () => {
-        const result = await shopRepository.updateByName('Bones', {
+        const result = await authorsRepository.updateByName('Bones', {
             'name': 'Cup cakes',
             'description': 'A delicious cup cake made by a handsome man',
             'img': 'https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg',
@@ -24,7 +24,7 @@ describe('shopRepository.update', () => {
 
     it('should return error when update the non-existing shop item', async () => {
         try {
-            const result = await shopRepository.updateByName('Monster', {
+            const result = await authorsRepository.updateByName('Monster', {
                 'name': 'Cup cakes',
                 'description': 'A delicious cup cake made by a handsome man',
                 'img': 'https://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/moist-chocolate-cupcakes-5.jpg',
